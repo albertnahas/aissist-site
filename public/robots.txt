@@ -1,0 +1,7 @@
+# robots.txt for www.aissistcli.dev
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://www.aissistcli.dev/sitemap.xml

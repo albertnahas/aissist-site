@@ -1,0 +1,27 @@
+{
+  "name": "Aissist - Local-First AI Assistant",
+  "short_name": "Aissist",
+  "description": "Organize your past, manage your present, and plan your future. Privacy-first CLI tool that stores everything in Markdown on your machine.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#0ea5e9",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "utilities", "development"],
+  "lang": "en-US",
+  "dir": "ltr"
+}
