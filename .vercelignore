@@ -1,0 +1,5 @@
+openspec/
+.claude/
+AGENTS.md
+node_modules/
+.git/
