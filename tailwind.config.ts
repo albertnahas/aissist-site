@@ -27,6 +27,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'Inter', 'sans-serif'],
+        display: ['var(--font-geist-sans)', 'Geist Sans', 'sans-serif'],
         mono: ['var(--font-geist-mono)', 'Geist Mono', 'monospace'],
       },
       fontSize: {

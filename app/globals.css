@@ -9,6 +9,7 @@ body {
   background-position: center;
   background-attachment: fixed;
   color: #e3e2e0;
+  font-family: var(--font-inter), 'Inter', sans-serif;
   font-feature-settings: "rlig" 1, "calt" 1;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -21,6 +22,7 @@ html {
 
 /* Better typography defaults */
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-geist-sans), 'Geist Sans', sans-serif;
   letter-spacing: -0.02em;
   font-weight: 700;
 }
