@@ -7,7 +7,7 @@ export function WorkflowSection() {
   return (
     <Section className="bg-dark-elevated">
       <Container>
-        <div className="text-center mb-20">
+        <div className="text-center mb-20 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold text-light-accent mb-6 tracking-tight leading-[1.2]">
             Your workflow, streamlined
           </h2>
@@ -22,12 +22,13 @@ export function WorkflowSection() {
               key={step.id}
               className={`flex flex-col ${
                 index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
-              } gap-12 items-center`}
+              } gap-12 items-center animate-fade-in-up`}
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Content */}
               <div className="flex-1">
                 <div className="flex items-center gap-5 mb-6">
-                  <div className="w-14 h-14 rounded-full bg-accent-primary flex items-center justify-center text-white font-bold text-2xl shadow-lg">
+                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-accent-primary to-accent-hover flex items-center justify-center text-white font-bold text-2xl shadow-premium-md shadow-glow-cyan/30 hover:scale-110 transition-transform duration-300">
                     {index + 1}
                   </div>
                   <h3 className="text-3xl md:text-4xl font-bold text-light-accent tracking-tight">
@@ -37,25 +38,25 @@ export function WorkflowSection() {
                 <p className="text-xl text-light-secondary mb-8 font-medium tracking-tight leading-relaxed">
                   {step.description}
                 </p>
-                <div className="bg-dark-base border border-dark-border rounded-xl p-5 font-mono text-base">
-                  <code className="text-accent-primary font-medium">$ {step.command}</code>
+                <div className="bg-dark-base/80 backdrop-blur-xl border border-dark-border/50 rounded-xl p-5 font-mono text-base shadow-premium-sm hover:shadow-premium-md hover:border-accent-primary/50 transition-all duration-300 group">
+                  <code className="text-accent-primary font-medium group-hover:text-accent-hover transition-colors">$ {step.command}</code>
                 </div>
               </div>
 
               {/* Demo GIF */}
               <div className="flex-1 w-full">
                 <div className="relative">
-                  {/* Subtle glow behind demo */}
-                  <div className="absolute -inset-2 bg-gradient-to-r from-accent-primary/10 via-purple-500/10 to-blue-500/10 rounded-xl blur-xl opacity-60" />
+                  {/* Subtle glow behind demo with animation */}
+                  <div className="absolute -inset-2 bg-gradient-to-r from-accent-primary/10 via-purple-500/10 to-blue-500/10 rounded-xl blur-xl opacity-60 animate-gradient-shift" style={{ backgroundSize: '200% 200%' }} />
 
                   {/* Window-style panel */}
-                  <div className="relative bg-dark-elevated border border-dark-border rounded-xl overflow-hidden shadow-xl">
+                  <div className="relative bg-dark-elevated/80 backdrop-blur-xl border border-dark-border/50 rounded-xl overflow-hidden shadow-premium-lg hover:shadow-premium-xl transition-all duration-500 group hover:-translate-y-1">
                     {/* Window chrome header */}
-                    <div className="flex items-center gap-2 px-4 py-2.5 bg-dark-base/50 border-b border-dark-border">
+                    <div className="flex items-center gap-2 px-4 py-2.5 bg-dark-base/50 border-b border-dark-border/50 backdrop-blur-xl">
                       <div className="flex gap-1.5">
-                        <div className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
-                        <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
-                        <div className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
+                        <div className="w-2.5 h-2.5 rounded-full bg-red-500/80 group-hover:bg-red-500 transition-colors" />
+                        <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80 group-hover:bg-yellow-500 transition-colors" />
+                        <div className="w-2.5 h-2.5 rounded-full bg-green-500/80 group-hover:bg-green-500 transition-colors" />
                       </div>
                       <div className="flex-1 text-center">
                         <span className="text-xs text-light-secondary font-mono">{step.id}</span>
