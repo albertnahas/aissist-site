@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "Aissist - Local-First AI Assistant",
     description: "Your data, your machine. No cloud. No tracking.",
     type: "website",
-    url: "https://aissist.dev",
+    url: "https://www.aissistcli.dev",
   },
   twitter: {
     card: "summary_large_image",
